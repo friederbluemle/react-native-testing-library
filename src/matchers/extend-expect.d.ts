@@ -1,7 +1,13 @@
 import { TextMatch, TextMatchOptions } from '../matches';
+import { toHaveDisplayValue } from './to-have-display-value';
+import { ReactTestInstance } from 'react-test-renderer';
 
 export interface JestNativeMatchers<R> {
   toBeOnTheScreen(): R;
+  toHaveDisplayValue(
+    expectedValue: TextMatch,
+    options?: TextMatchOptions
+  ): R;
   toHaveTextContent(text: TextMatch, options?: TextMatchOptions): R;
 }
 
