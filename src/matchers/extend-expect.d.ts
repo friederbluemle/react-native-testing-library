@@ -2,6 +2,7 @@ import { TextMatch, TextMatchOptions } from '../matches';
 
 export interface JestNativeMatchers<R> {
   toBeOnTheScreen(): R;
+  toBeDisabled(): R;
   toHaveTextContent(text: TextMatch, options?: TextMatchOptions): R;
 }
 
